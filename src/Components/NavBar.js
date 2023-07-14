@@ -1,5 +1,6 @@
 import React from "react";
 import NavBarLink from "./NavBarLinks";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     const signStyle = "font-bold w-[100px] text-lg py-2 text-[#3a4343] bg-white rounded-md duration-200 hover:bg-[#3a4343] hidden md:block hover:text-white"
@@ -24,7 +25,7 @@ function NavBar() {
             <h1 className="flex-[0.7] md:text-2xl  font-bold text-white">CLINIC SERVICE</h1>
 
             <div className="hidden md:block">
-                <NavBarLink arr={['Doctors', 'Contact Us', 'My Appointments']}></NavBarLink>
+                <NavBarLink arr={['Home', 'Doctors', 'Contact Us', 'My Appointments']}></NavBarLink>
             </div>
 
             <button id="menubtn" onClick={hamburgerFun} className="block hamburger md:hidden">
@@ -35,12 +36,16 @@ function NavBar() {
 
             <div className="md:hidden">
                 <div id="menu" className={navBarMobileStyle}>
-                    <NavBarLink arr={['Doctors', 'Contact Us', 'My Appointments']}></NavBarLink>
-                    <button id="login" className={signStyle}>Sign In</button>
+                    <NavBarLink arr={['Home', 'Doctors', 'Contact Us', 'My Appointments']}></NavBarLink>
+                    <Link to="/signin">
+                        <button id="login" className={signStyle}>Sign In</button>
+                    </Link>
                 </div>
             </div>
 
-            <button className={signStyle}>Sign In</button>
+            <Link to="/signin">
+                <button id="login" className={signStyle}>Sign In</button>
+            </Link>
         </div>
         </>
     )

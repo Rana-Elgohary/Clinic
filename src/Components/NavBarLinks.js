@@ -9,9 +9,9 @@ function NavBarLink(props) {
         <>
         {link.map((ele) => {
             if(ele==="Doctors"){
-                return <ScrollLink key={ele} className={cla} activeClass="active" to="Doctors" spy={true} smooth={true} offset={-50} duration={500}>{ele}</ScrollLink>
+                return <ScrollLink key={ele} className={cla} activeClass="active" to="Doctors" spy={true} smooth={true} offset={-20} duration={500}>{ele}</ScrollLink>
             }else{
-                return <Link key={ele} className={cla} to="#">{ele}</Link>
+                return <Link key={ele} className={cla} to={`/${ele}`}>{ele}</Link>
             }
         })}
         </>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
+import { Link } from 'react-router-dom';
 
 function DocCard() {
     const slides = [
@@ -39,13 +40,15 @@ function DocCard() {
         <>
         <div id='Doctors' className='max-w-[1400px] w-full m-auto py-16 px-4 relative group'>
             <div className='duration-500 flex flex-row justify-evenly items-center'>
-                <img src={slides[currentIndex].url} alt='doctor' className='h-[500px] w-[500px]'></img>
+                <img src={slides[currentIndex].url} alt='doctor' className='w-[200px] md:w-[500px]'></img>
                 <div className='flex flex-col items-center'>
-                    <p className='text-lg p-4 font-bold'> Dr. Rana Mohamed</p>
-                    <p className='text-lg p-4'>M.D, PH.D</p>
-                    <p className='text-lg p-4'>General Pediatrics, Pulmonary</p>
-                    <button className="rounded-md font-bold md:text-base text-xs p-2 md:p-5 uppercase text-white bg-[#7cb2ec] transition-all my-3 md:my-5 md:w-44
-                hover:bg-[#3a434356] hover:border-transparent hover:text-[#3a4343]">View Details</button>  
+                    <p className='text-xs md:text-lg p-2 md:p-4 font-bold'> Dr. Rana Mohamed</p>
+                    <p className='text-xs md:text-lg p-2 md:p-4'>M.D, PH.D</p>
+                    <p className='text-xs md:text-lg p-2 md:p-4'>General Pediatrics, Pulmonary</p>
+                    <Link to='/doctordetails'>
+                        <button className="rounded-md font-bold md:text-base text-xs p-3 md:p-5 uppercase text-white bg-[#7cb2ec] transition-all my-3 md:my-5 md:w-44
+                    hover:bg-[#3a434356] hover:border-transparent hover:text-[#3a4343]">View Details</button>  
+                    </Link>
                 </div>
             </div>
 

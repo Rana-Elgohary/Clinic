@@ -7,6 +7,18 @@
   background-size: cover;
 }
 
+.signInBg{
+  background-image: url("img/signin.jpg");
+  background-size: cover;
+  background-position: 50% 40%;
+}
+
+.makeBlur{
+  backdrop-filter: blur(2px); 
+  background-color: rgba(75, 75, 75, 0.173);
+  height: 100%;
+}
+
 .hamburger {
   cursor: pointer;
   width: 24px;
