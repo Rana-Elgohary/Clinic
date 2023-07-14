@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
     return(
         <>
-        <footer className="bg-[#7cb2ec]">
+        <footer className="footer bg-[#7cb2ec] w-[100%]">
             <div className="flex flex-col-reverse justify-around px-6 md:py-10 space-y-8 md:flex-row md:space-y-0">
                 <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-center">
                     <div className="mx-auto my-6 text-center text-white md:hidden">

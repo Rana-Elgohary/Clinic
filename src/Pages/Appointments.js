@@ -6,6 +6,11 @@ function Appointments() {
     return (
         <>
         <NavBar></NavBar>
+        <div className="relative min-h-[64vh]">
+            <div>
+                
+            </div>
+        </div>
         <Footer></Footer>
         </>
     )
